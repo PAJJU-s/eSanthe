@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2D6A4F;
+  --color-accent: #52B788;
+  --color-bg: #F8FAF5;
+  --color-text: #1B4332;
+  --color-muted: #6B7280;
+  --color-border: #D1FAE5;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --color-surface: #FFFFFF;
+
+  --font-display: 'Poppins', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
+  --font-kannada: 'Noto Sans Kannada', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Button — Primary */
+  .btn-primary {
+    @apply bg-primary text-white rounded-full px-6 py-2.5 font-semibold hover:bg-accent transition;
+  }
+
+  /* Button — Secondary / Ghost */
+  .btn-ghost {
+    @apply border border-primary text-primary rounded-full px-6 py-2.5 hover:bg-border transition;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-surface rounded-2xl shadow-sm border border-border p-4 hover:shadow-md transition;
+  }
+
+  /* Badge */
+  .badge {
+    @apply bg-border text-primary rounded-full text-xs px-2.5 py-0.5 font-medium;
+  }
+}

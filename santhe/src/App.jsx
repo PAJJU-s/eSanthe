@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 // Pages
 import Landing from './pages/Landing';
 import Auth from './pages/Auth';
+import Callback from './Callback';
 import Dashboard from './pages/Dashboard';
 import Marketplace from './pages/Marketplace';
 import ProductDetail from './pages/ProductDetail';
@@ -27,6 +28,7 @@ export default function App() {
 
           {/* P2: Authentication (Public) */}
           <Route path="/auth" element={<Auth />} />
+          <Route path="/auth/callback" element={<Callback />} />
 
           {/* Shared Auth Pages (P4, P5) */}
           <Route element={<ProtectedRoute />}>
